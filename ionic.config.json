@@ -1,0 +1,7 @@
+{
+  "name": "callHelper",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
