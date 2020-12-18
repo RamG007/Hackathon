@@ -15,6 +15,18 @@ const routes: Routes = [
     path: 'welcome',
     loadChildren: () => import('./welcome/welcome.module').then( m => m.WelcomePageModule)
   },
+  {
+    path: 'hospitals',
+    loadChildren: () => import('./hospitals/hospitals.module').then( m => m.HospitalsPageModule)
+  },
+  {
+    path: 'patients',
+    loadChildren: () => import('./patients/patients.module').then( m => m.PatientsPageModule)
+  },
+  {
+    path: 'notifications',
+    loadChildren: () => import('./notifications/notifications.module').then( m => m.NotificationsPageModule)
+  },
 ];
 
 @NgModule({

@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { HttpClient, HttpHeaders, HttpErrorResponse } from '@angular/common/http';
 import { ToastController, NavController, LoadingController, AlertController } from '@ionic/angular';
 import 'rxjs/add/operator/map';
+import { Storage } from '@ionic/storage';
 
 @Component({
   selector: 'app-welcome',
@@ -10,12 +11,15 @@ import 'rxjs/add/operator/map';
 })
 export class WelcomePage implements OnInit {
 
-  moblieNum: string = "";
+  moblieNum: number;
+  password: string = "";
 
   constructor(
     private loading: LoadingController,
     private http: HttpClient, 
-    private toastCtrl: ToastController
+    private toastCtrl: ToastController,
+    private storage: Storage,
+    private navCtrl: NavController,
   ) { }
 
   ngOnInit() {
@@ -23,34 +27,27 @@ export class WelcomePage implements OnInit {
 
   async GetOtp() {
 
-    if(this.moblieNum.length < 10) {
+    if(this.moblieNum.toString().length != 10) {
       this.presentToast("Please provide a valid mobile number");
+    }else if (this.password.length < 6) {
+      this.presentToast("Password should be atleast 6 characters");
     }
     else {
-      var headers = new HttpHeaders();
-      headers.append("Accept", 'application/json');
-      headers.append('Content-Type', 'application/json' );
-      let options = { headers: headers };
-
-
-      let data = {
-        number: this.moblieNum
-      };
 
       let loader = await this.loading.create({
         message: 'Processing please wait...',
       });
 
       loader.present().then(() => {
-        this.http.post('url', data, options)
-          .map(res => res)
-          .subscribe((res: any) => {
-            
-            console.log(res)
-            loader.dismiss()         
-            
-          });
-      });
+
+        this.storage.set('phone', this.moblieNum);
+        this.storage.set('password', this.password);
+        loader.dismiss();
+        this.navCtrl.navigateRoot('/home');
+        
+      });      
+
+      
     }
 
     

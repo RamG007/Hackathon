@@ -12,6 +12,8 @@ export class HomePage implements OnInit{
     slidesPerView: 1.2
   }
 
+  
+
   constructor(
     public toastCtrl: ToastController,
   ) {}
