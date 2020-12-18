@@ -27,6 +27,10 @@ const routes: Routes = [
     path: 'notifications',
     loadChildren: () => import('./notifications/notifications.module').then( m => m.NotificationsPageModule)
   },
+  {
+    path: 'patient-details',
+    loadChildren: () => import('./patient-details/patient-details.module').then( m => m.PatientDetailsPageModule)
+  },
 ];
 
 @NgModule({
