@@ -1,12 +1,29 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { ToastController } from '@ionic/angular';
 
 @Component({
   selector: 'app-home',
   templateUrl: 'home.page.html',
   styleUrls: ['home.page.scss'],
 })
-export class HomePage {
+export class HomePage implements OnInit{
 
-  constructor() {}
+  slideOptions = {
+    slidesPerView: 1.2
+  }
+
+  constructor(
+    public toastCtrl: ToastController,
+  ) {}
+
+
+  
+
+  ngOnInit() {
+    
+  }
+
+  
+  
 
 }

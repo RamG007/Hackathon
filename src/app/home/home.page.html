@@ -1,20 +1,191 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
-  </ion-toolbar>
+<ion-header class="ion-no-border">
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-button>
+                <ion-icon name="apps"></ion-icon>
+            </ion-button>
+        </ion-buttons>
+
+        <ion-buttons slot="end">
+            <ion-button class="bordered" fill="solid" color="light">
+                <ion-icon color="custom" name="notifications"></ion-icon>
+            </ion-button>
+        </ion-buttons>
+    </ion-toolbar>
+
+    
+    <!--
+        <ion-item lines="none">
+        <ion-avatar slot="start">
+            <img src ="../../assets/icon/favicon.png">
+        </ion-avatar>
+        <ion-label>
+            <p>Hello,</p>
+            <h3>Habib AlMawali</h3>
+        </ion-label>
+    </ion-item>
+    -->
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content>
+  <div class="slides ion-margin-bottom">
+      <ion-slides [options]="slideOptions">
+          <ion-slide>
+              <ion-card>
+                  <ion-card-header>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+                    <ion-item lines="none">
+                        <ion-avatar slot="start">
+                            <img src ="../../assets/icon/favicon.png">
+                        </ion-avatar>
+                        <ion-label>
+                            <p>Hello,</p>
+                            <h3>Habib AlMawali</h3>
+                        </ion-label>
+                    </ion-item>
+                    <img class="files" src="https://i.ibb.co/jD8ypLq/files.jpg">
+                  </ion-card-header>
+                  <ion-card-content class="ion-text-left">
+                      <ion-card-title class="ion-margin-bottom">Ashok Kumar</ion-card-title>
+                      <ion-card-subtitle class="ion-text-right">45 years old</ion-card-subtitle>
+                      <ion-progress-bar value="0.5" color="custom"></ion-progress-bar>
+                  </ion-card-content>
+              </ion-card>
+          </ion-slide>
+
+          <ion-slide>
+            <ion-card>
+                <ion-card-header>
+                    <ion-item lines="none">
+                        <ion-avatar slot="start">
+                            <img src ="../../assets/icon/favicon.png">
+                        </ion-avatar>
+                        <ion-label>
+                            <p>Hello,</p>
+                            <h3>Habib AlMawali</h3>
+                        </ion-label>
+                    </ion-item>
+                  <img class="files" src="https://i.ibb.co/jD8ypLq/files.jpg">
+                </ion-card-header>
+                <ion-card-content class="ion-text-left">
+                    <ion-card-title class="ion-margin-bottom">Ashok Kumar</ion-card-title>
+                    <ion-card-subtitle class="ion-text-right">45 years old</ion-card-subtitle>
+                    <ion-progress-bar value="0.5" color="custom"></ion-progress-bar>
+                </ion-card-content>
+            </ion-card>
+        </ion-slide>
+      </ion-slides>
+  </div>
+
+  <h2>Last File</h2>
+
+  <div class="container">
+      
+      <ion-item lines="none">
+          <ion-grid>
+              <ion-row class="ion-align-items-center">
+                <ion-col size="3" color=light>
+                    <ion-icon name="document" color="light" style="font-size: 30px;"></ion-icon>
+                </ion-col>
+                <ion-col size="7">
+                    <ion-label>
+                        <h4>Akshay</h4>
+                        <h6>shornur, palakkad</h6>
+                    </ion-label>
+                </ion-col>
+                <ion-col size="2">
+                    <ion-button color="light" fill="clear" style="border-radius: 50%;">
+                        <ion-icon slot="icon-only" name="arrow-forward"></ion-icon>
+                    </ion-button>
+                </ion-col>
+              </ion-row>              
+          </ion-grid>
+      </ion-item>
+
+      <ion-item lines="none">
+        <ion-grid>
+            <ion-row class="ion-align-items-center">
+              <ion-col size="3" color=light>
+                  <ion-icon name="document" color="light" style="font-size: 30px;"></ion-icon>
+              </ion-col>
+              <ion-col size="7">
+                  <ion-label>
+                      <h4>Akshay</h4>
+                      <h6>shornur, palakkad</h6>
+                  </ion-label>
+              </ion-col>
+              <ion-col size="2">
+                  <ion-button color="light" fill="clear" style="border-radius: 50%;">
+                      <ion-icon slot="icon-only" name="arrow-forward"></ion-icon>
+                  </ion-button>
+              </ion-col>
+            </ion-row>              
+        </ion-grid>
+    </ion-item>
+
+    <ion-item lines="none">
+        <ion-grid>
+            <ion-row class="ion-align-items-center">
+              <ion-col size="3" color=light>
+                  <ion-icon name="document" color="light" style="font-size: 30px;"></ion-icon>
+              </ion-col>
+              <ion-col size="7">
+                  <ion-label>
+                      <h4>Akshay</h4>
+                      <h6>shornur, palakkad</h6>
+                  </ion-label>
+              </ion-col>
+              <ion-col size="2">
+                  <ion-button color="light" fill="clear" style="border-radius: 50%;">
+                      <ion-icon slot="icon-only" name="arrow-forward"></ion-icon>
+                  </ion-button>
+              </ion-col>
+            </ion-row>              
+        </ion-grid>
+    </ion-item>
+
+    <ion-item lines="none">
+        <ion-grid>
+            <ion-row class="ion-align-items-center">
+              <ion-col size="3" color=light>
+                  <ion-icon name="document" color="light" style="font-size: 30px;"></ion-icon>
+              </ion-col>
+              <ion-col size="7">
+                  <ion-label>
+                      <h4>Akshay</h4>
+                      <h6>shornur, palakkad</h6>
+                  </ion-label>
+              </ion-col>
+              <ion-col size="2">
+                  <ion-button color="light" fill="clear" style="border-radius: 50%;">
+                      <ion-icon slot="icon-only" name="arrow-forward"></ion-icon>
+                  </ion-button>
+              </ion-col>
+            </ion-row>              
+        </ion-grid>
+    </ion-item>
+
+    <ion-item lines="none">
+        <ion-grid>
+            <ion-row class="ion-align-items-center">
+              <ion-col size="3" color=light>
+                  <ion-icon name="document" color="light" style="font-size: 30px;"></ion-icon>
+              </ion-col>
+              <ion-col size="7">
+                  <ion-label>
+                      <h4>Akshay</h4>
+                      <h6>shornur, palakkad</h6>
+                  </ion-label>
+              </ion-col>
+              <ion-col size="2">
+                  <ion-button color="light" fill="clear" style="border-radius: 50%;">
+                      <ion-icon slot="icon-only" name="arrow-forward"></ion-icon>
+                  </ion-button>
+              </ion-col>
+            </ion-row>              
+        </ion-grid>
+    </ion-item>
+
+      
   </div>
 </ion-content>
