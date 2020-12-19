@@ -1,4 +1,13 @@
-
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button style="color: white;">
+        <ion-icon name="arrow-back-circle" slot="icon-only"></ion-icon>
+      </ion-back-button>
+    </ion-buttons>
+    <ion-title class="ion-text-center" style="color: white; position: relative; left: 15px; font-weight: 700; font-size: 35px;">{{data.name}}</ion-title>
+  </ion-toolbar>
+</ion-header>
 
 <ion-content>
 
@@ -7,12 +16,10 @@
 
     <div class="space-between">
       <div class="followings">
-        <ion-badge color="primary">{{data.address}}</ion-badge>
-        <p>info</p>
+        <p style="font-size: 15px; font-weight: 400;">{{data.address}}</p>
       </div>
       <div class="followings">
-        <ion-badge color="primary">data.age</ion-badge>
-        <p>info</p>
+        <p style="font-size: 15px; font-weight: 400;"> {{data.age}} years old</p>        
       </div>  
     </div>
   </div>
@@ -27,6 +34,19 @@
     </div>
   </div>
 
+  <ion-card>
+    <ion-card-title>Remarks</ion-card-title>
+    <ion-card-content>
+      <ion-item>
+        <ion-label position="stacked">Summary</ion-label>
+        <ion-textarea
+          disabled
+          readonly
+          value="Ionic enables developers to build performant, high-quality mobile apps.">
+        </ion-textarea>
+      </ion-item>
+    </ion-card-content>
+  </ion-card>
   
 </ion-content>
 

@@ -2,10 +2,15 @@
     background-color: #32eb6a;
     height: 180px;
     padding-top: 1px;
-    border-top-left-radius: 20px;
+    //border-top-left-radius: 20px;
     border-bottom-left-radius: 10px;
-    border-top-right-radius: 20px;
+    //border-top-right-radius: 20px;
     border-bottom-right-radius: 10px;
+}
+
+ion-toolbar {
+    --background: #32eb6a;
+    --border-style: none;
 }
 
 .header h2{
