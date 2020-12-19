@@ -1,6 +1,6 @@
 .header{
     background-color: #32eb6a;
-    height: 180px;
+    height: 120px;
     padding-top: 1px;
     //border-top-left-radius: 20px;
     border-bottom-left-radius: 10px;
@@ -59,4 +59,25 @@ ion-toolbar {
     background-size: contain;
     min-height: 100px;
     min-width: 100px;
+}
+
+ion-card {
+    position: relative;
+    border-radius: 20px;
+    bottom: 20px;
+}
+
+.days-remain {
+    position: relative;
+    margin-left: 10px;
+    top: 50px;
+    font-size: 15px;
+    font-weight: 400;
+    color: rgb(145, 143, 141);
+
+    p {
+        font-size: 25px;
+        color: black;
+        font-weight: 700;
+    }
 }

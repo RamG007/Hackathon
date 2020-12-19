@@ -5,21 +5,19 @@
         <ion-icon name="arrow-back-circle" slot="icon-only"></ion-icon>
       </ion-back-button>
     </ion-buttons>
-    <ion-title class="ion-text-center" style="color: white; position: relative; left: 15px; font-weight: 700; font-size: 35px;">{{data.name}}</ion-title>
+    <ion-title style="color: white; position: relative; left: 80px; font-weight: 500; font-size: 30px;">{{data.name}}</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
 
   <div class="header">
-    <h2>{{data.name}}</h2>
-
     <div class="space-between">
       <div class="followings">
-        <p style="font-size: 15px; font-weight: 400;">{{data.address}}</p>
+        <p style="font-size: 18px; font-weight: 400;">{{data.address}}</p>
       </div>
       <div class="followings">
-        <p style="font-size: 15px; font-weight: 400;"> {{data.age}} years old</p>        
+        <p style="font-size: 18px; font-weight: 400;"> {{data.age}} years old</p>        
       </div>  
     </div>
   </div>
@@ -34,16 +32,12 @@
     </div>
   </div>
 
-  <ion-card>
-    <ion-card-title>Remarks</ion-card-title>
+  <p style="margin-top: 10px; margin-left: 10px; margin-bottom: 10px; font-size: 20px; font-weight: 500;">Quaratine Remaining : {{data.remainingDays}}</p>
+
+  <ion-card style="position: relative; bottom: 10px;" class="ion-margin-top">    
     <ion-card-content>
-      <ion-item>
-        <ion-label position="stacked">Summary</ion-label>
-        <ion-textarea
-          disabled
-          readonly
-          value="Ionic enables developers to build performant, high-quality mobile apps.">
-        </ion-textarea>
+      <ion-item>        
+        <ion-textarea rows="4" cols="20" placeholder="Any Remarks........"></ion-textarea>
       </ion-item>
     </ion-card-content>
   </ion-card>
