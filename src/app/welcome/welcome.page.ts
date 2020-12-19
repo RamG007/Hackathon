@@ -43,7 +43,7 @@ export class WelcomePage implements OnInit {
         this.storage.set('phone', this.moblieNum);
         this.storage.set('password', this.password);
         loader.dismiss();
-        this.navCtrl.navigateRoot('/home');
+        this.navCtrl.navigateRoot('/patients');
         
       });      
 

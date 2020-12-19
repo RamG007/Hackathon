@@ -1,97 +1,6 @@
 
 
-<!--
-<ion-header class="ion-no-border">
-    <ion-toolbar>
-        <ion-buttons slot="start">
-            <ion-menu-button menu="main-menu">
-                <ion-icon name="apps"></ion-icon>
-            </ion-menu-button>
-        </ion-buttons>
-        <ion-buttons slot="end">
-            <ion-button class="bordered" fill="solid" color="light">
-                <ion-icon color="custom" name="notifications"></ion-icon>
-            </ion-button>
-        </ion-buttons>
-    </ion-toolbar>
-</ion-header>
 
-<ion-content>
-  <div class="slides ion-margin-bottom">
-     
-              <ion-card>
-                  
-                    <ion-card-header>
-                    <ion-item lines="none">
-                        <ion-avatar slot="start">
-                            <ion-icon name="person-circle-sharp" color="primary" style="font-size: 50px; bottom: 8px; position: relative;"></ion-icon>
-                        </ion-avatar>
-                        <ion-label>
-                            <p>{{item.name}},</p>
-                            <h3>{{item.address}}</h3>
-                        </ion-label>
-                    </ion-item> 
-                    <div>
-                        <p>Quarintine Remaining </p>
-                        <p style="font-size: 20px; font-weight: 600;">{{item.remainingDays}} days<p>
-                    </div>                                
-                  </ion-card-header>
-                  <ion-card-content class="ion-text-left">
-                      <ion-card-title class="ion-margin-bottom">Status : {{item.status}}</ion-card-title>
-                      <ion-card-subtitle class="ion-text-right">{{item.age}} years old</ion-card-subtitle>
-                  </ion-card-content>
-                 
-                  <ion-card-header>
-                    <div class="container_circle">
-                        <div class="card">
-                            <div class="box">
-                                <div class="percent">
-                                    <svg>
-                                        <circle cx="70" cy="70" r="70"></circle>
-                                        <circle cx="70" cy="70" r="70"></circle>
-                                    </svg>
-                                    <div class="number">
-                                        <h2 style="color: rgb(211, 202, 202); position: relative; right: 0px;">90<span>%</span></h2>
-                                    </div>
-                                </div>  
-                                <div class="title" style="left: 50px; position: relative;">patients</div>                          
-                            </div>
-                        </div>
-                      </div>
-                  </ion-card-header>
-                  
-
-
-              </ion-card>
-          
-  </div>
-
-  <h2>Recent</h2>
-
-  <div class="container">      
-      <ion-item *ngFor="let item of recentPatients" lines="none">
-          <ion-grid>
-              <ion-row class="ion-align-items-center">
-                <ion-col size="3" color=light>                    
-                    <ion-icon name="person-circle-sharp" color="light" style="font-size: 40px;"></ion-icon>
-                </ion-col>
-                <ion-col size="7">
-                    <ion-label>
-                        <h4>{{item.name}}</h4>
-                        <h6>{{item.address}}</h6>
-                    </ion-label>
-                </ion-col>
-                <ion-col size="2">
-                    <ion-button color="light" fill="clear" style="border-radius: 50%;" (click)="openDetailsWithState(item)">
-                        <ion-icon slot="icon-only" name="arrow-forward"></ion-icon>
-                    </ion-button>
-                </ion-col>
-              </ion-row>              
-          </ion-grid>
-      </ion-item> 
-  </div>
-</ion-content>
--->
 
 <ion-header class="ion-no-border">
     <ion-toolbar>
@@ -110,6 +19,10 @@
 
 <ion-content>
     <ion-card class="top-card" style="margin-top: 20px;">
+        <ion-label>
+            <p style="font-size: 20px; position: relative; top: 90px; font-weight: 500;">Patients: 130</p>
+            <p style="font-size: 20px; position: relative; top: 110px; font-weight: 500;">Locality</p>
+        </ion-label>
         <div class="container_circle">
             <div class="card">
                 <div class="box">
@@ -119,13 +32,13 @@
                             <circle cx="70" cy="70" r="70"></circle>
                         </svg>
                         <div class="number">
-                            <h2 style="color: rgb(211, 202, 202); position: relative; right: 0px;">90<span>%</span></h2>
+                            <h2 style="color: rgb(211, 202, 202); position: relative; right: 0px;">75<span>%</span></h2>
                         </div>
                     </div>  
                     <div class="title" style="left: 50px; position: relative;">patients</div>                          
                 </div>
             </div>
-          </div>
+        </div>
     </ion-card>
 
     <div class="slides ion-margin-bottom" style="margin-top: 50px;">
@@ -133,12 +46,70 @@
             <ion-slide>
                 <ion-card class="bottom-card" style="background-color: rgb(224, 156, 241);">
                     <h1 style="color: white; font-weight: 200;">Positive</h1>
+
+                    <div class="container_circle"  >
+                        <div class="card">
+                            <div class="box-1" style="background-color: rgb(224, 156, 241); position: relative; left: 16px; ">
+                                <div class="percent">
+                                    <svg>
+                                        <circle cx="70" cy="70" r="70"></circle>
+                                        <circle cx="70" cy="70" r="70"></circle>
+                                    </svg>
+                                    <div class="number">
+                                        <h2 style="color: rgb(255, 255, 255); position: relative; right: 0px;">40<span>%</span></h2>
+                                    </div>
+                                </div>  
+                                <div class="title" style="position: relative; right: 18px">patients</div>                          
+                            </div>
+                        </div>
+                    </div> 
+
                 </ion-card>
+
+
                 <ion-card class="bottom-card" style="background-color: rgba(122, 255, 177, 0.952);">
                     <h1 style="color: white; font-weight: 200;">Critical</h1>
+
+                    <div class="container_circle"  >
+                        <div class="card">
+                            <div class="box-2" style="background-color: rgba(122, 255, 177, 0.952); position: relative; left: 16px; ">
+                                <div class="percent">
+                                    <svg>
+                                        <circle cx="70" cy="70" r="70"></circle>
+                                        <circle cx="70" cy="70" r="70"></circle>
+                                    </svg>
+                                    <div class="number">
+                                        <h2 style="color: rgb(255, 255, 255); position: relative; right: 0px;">60<span>%</span></h2>
+                                    </div>
+                                </div>  
+                                <div class="title" style="position: relative; right: 18px">patients</div>                          
+                            </div>
+                        </div>
+                    </div> 
+
                 </ion-card>
+
+
                 <ion-card class="bottom-card" style="background: #6dd5ed ">
                     <h1 style="color: white; font-weight: 200;">Severe</h1>
+                    
+                    <div class="container_circle"  >
+                        <div class="card">
+                            <div class="box-3" style="background-color: #6dd5ed; position: relative; left: 16px; ">
+                                <div class="percent">
+                                    <svg>
+                                        <circle cx="70" cy="70" r="70"></circle>
+                                        <circle cx="70" cy="70" r="70"></circle>
+                                    </svg>
+                                    <div class="number">
+                                        <h2 style="color: rgb(255, 255, 255); position: relative; right: 0px;">70<span>%</span></h2>
+                                    </div>
+                                </div>  
+                                <div class="title" style=" position: relative; right: 18px">patients</div>                          
+                            </div>
+                        </div>
+                    </div> 
+
                 </ion-card>
             </ion-slide>
         </ion-slides>
